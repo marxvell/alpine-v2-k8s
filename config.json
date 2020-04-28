@@ -1,0 +1,29 @@
+{
+    "inbounds": [
+        {
+            "port": $OTPORT,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$UUID",
+                        "alterId": 64
+                    }
+                ],
+                "disableInsecureEncryption": true
+            },
+            "streamSettings": {
+                "network": "ws"
+                "wsSettings": {
+                    "connectionReuse": true,
+                    "path": "/ws"
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
