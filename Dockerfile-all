@@ -14,7 +14,7 @@ RUN chmod +x /startup.sh
 ##############################################################
 FROM base as prod
 
-ADD config.json /usr/local/etc/v2ray/config.json
+ADD config.json /etc/v2ray/config.json
 
 EXPOSE 8080
 ENTRYPOINT ["sh", "/startup.sh"]
