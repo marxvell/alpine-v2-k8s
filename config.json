@@ -1,12 +1,12 @@
 {
     "inbounds": [
         {
-            "port": $OTPORT,
+            "port": 8080,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID",
+                        "id": "king0987-3d86-8656-98b6-mw87xy8521f9",
                         "alterId": 64
                     }
                 ],
