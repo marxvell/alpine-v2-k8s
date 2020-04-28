@@ -7,14 +7,13 @@ RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl 
  && rm -rf /v2ray.zip /usr/bin/v2ray/*.sig /usr/bin/v2ray/doc /usr/bin/v2ray/*.json /usr/bin/v2ray/*.dat /usr/bin/v2ray/sys* \
  && chgrp -R 0 /etc/v2ray \
  && chmod -R g+rwX /etc/v2ray
-ADD startup.sh /startup.sh
-RUN chmod +x /startup.sh
 
 ###############################################################
 FROM base as prod
 
-ENV OTPORT=8080
 ADD config.json /etc/v2ray/config.json
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
 
 EXPOSE 8080
 ENTRYPOINT ["sh", "/startup.sh"]
