@@ -13,7 +13,7 @@
                 "disableInsecureEncryption": true
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
                 "wsSettings": {
                     "connectionReuse": true,
                     "path": "/ws"
