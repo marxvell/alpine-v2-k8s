@@ -11,11 +11,11 @@ RUN apk update && apk add --no-cache --virtual .build-deps ca-certificates curl 
 ADD startup.sh /startup.sh
 RUN chmod +x /startup.sh
 
-##############################################################
+###############################################################
 FROM base as prod
 
 ENV OTPORT=8080 && \
-    UUID=k0987654-3def-8656-90ab-0987xy8521f9
+    UUID=king0987-3def-8656-90ab-0987xy8521f9
     
 ADD config.json /etc/v2ray/config.json
 
